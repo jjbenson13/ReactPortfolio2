@@ -1,24 +1,24 @@
-import {
-  Route,
-  Switch
-} from 'react-router-dom'
-
 import './App.css'
-import { Home, Resume, Page404 } from './pages'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
+import Navbar from './components/Navbar/navbar'
 
-
-const App = () => {
-
+function App() {
   return (
-    <div id="main">
-      <Switch>
-        <Route exact path='/' >
-          <Home />
-        </Route>
-        <Page404 />
-      </Switch>
-    </div>
-  )
+    <Router>
+      <div>
+        face
+        <Switch>
+          <Route exact path='/'>
+            <Navbar />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
